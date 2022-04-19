@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8><meta content="width=device-width,initial-scale=1" name=viewport><title></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="main.css" rel=stylesheet>
+<style>
+
+.paddle {
+	position: absolute;
+	top: 50%;
+ 	 -ms-transform: translateY(-50%);
+  	 transform: translateY(-50%);
+	padding: 0;
+	width: 10vw;
+	font-size: 10vw;
+	background: transparent;
+	/* background: rgba(0,95,115,.3); */
+	border: transparent;
+}
+
+.material-icons-outlined {
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+   body {
+       background: rgba(0, 18, 25, 0.2);
+   }
+   
+    .slides {
+	display: block;
+  }
+
+  .paddle, .slider a {
+      display: none;
+  }
+
+  .slides > div {
+    margin: 0 auto 2vmax auto;
+  }
+
+}
+
+</style>
+
+
+</head>
+<body>
+    <div id="bg">
+            <img src="bg_flute.jpg" alt="">
+          </div>
+<div class="container">
+    <header>
+
+        <nav class="top-bar">
+            <ul>
+                <li>
+                    <a href="#1" id="home">Home</a>
+                </li>
+                <li>
+                    <a id="about" href="#2">About</a>
+                    <!-- <ul class="sub-menu">
+                        <li><a href="#">Child</a></li>
+                        <li><a href="#">Child</a>
+                            <ul>
+                            <li><a href="#">Child of child</a></li>
+                            <li><a href="#">Child of child</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Child</a></li>
+                        <li><a href="#">Child</a></li>
+                        <li><a href="#">Child</a></li>
+                    </ul> -->
+                </li>
+                <li>
+                    <a id="contact" href="#6">Contact</a>
+                    <!-- <ul class="sub-menu">
+                        <li><a href="#">Child</a></li>
+                        <li><a href="#">Child</a></li>
+                        <li><a href="#">Child</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+
+        <div class="slider">
+
+            <a id="one" href="#1"></a>
+            <a id="two" href="#2"></a>
+            <a id="three" href="#3"></a>
+            <a id="four" href="#4"></a>
+            <a id="five" href="#5"></a>
+            <a id="six" href="#6"></a>
+
+            <div class="slides">
+            
+              <div id="1">
+                <div class="content"><h1>Welcome</h1>
+                    <p>Demo text goes here...</p>
+                    <p class="button"><button class="click">Learn More</button>
+                    </p></div>
+              </div>
+              <div id="2">
+                <div class="content"><h1>About Me</h1>
+                    <p>Short bio and introduction</p>
+                    <p class="button"><button class="click">Learn More</button>
+                    </p></div>
+              </div>
+              <div id="3">
+                <div class="content"><h1>Portfolio</h1>
+                    <p>Short intro text...</p>
+                    <p class="button"><button class="click">Learn More</button>
+                    </p></div>
+              </div>
+              <div id="4">
+                <div class="content"><h1>Services</h1>
+                    <p>Click to find out more:</p>
+                    <p class="button"><button class="click">Learn More</button>
+                    </p></div>
+              </div>
+              <div id="5">
+                <div class="content"><h1>Follow Me</h1>
+                    <p>Social media links:</p>
+                    <p class="button"><button class="click">Learn More</button>
+                    </p></div>
+              </div>
+              <div id="6">
+                <div class="content"><h1>Contact</h1>
+                    <p>For more information, contact:</p>
+                    <p class="button"><button class="click">Learn More</button>
+                    </p></div>
+              </div>
+            </div>
+            <div class="paddles">
+                <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+                
+                <button id="left-paddle" class="paddle"><a class="left-paddle"id="left" href="#">
+                    <span class="material-icons-outlined">
+                        arrow_circle_left
+                        </span></a>
+                </button>
+                <button id="right-paddle" class="paddle"><a class="right-paddle material-icons-outlined" id="right" href="#">
+                        arrow_circle_right
+                        </a>
+                </button>
+
+                <script>
+                    var leftPaddle = document.getElementsByClassName('left-paddle');
+                    var rightPaddle = document.getElementsByClassName('right-paddle');
+                    var pos = 1;
+
+                    $("#one").click (
+                     function() {
+                        pos = 1;
+                    });
+
+                    $("#home").click (
+                     function() {
+                        pos = 1;
+                    });
+
+                    $("#two").click (
+                     function() {
+                        pos = 2;
+                    });
+
+                    $("#about").click (
+                     function() {
+                        pos = 2;
+                    });
+
+                    $("#three").click (
+                     function() {
+                        pos = 3;
+                    });
+
+                    $("#four").click (
+                     function() {
+                        pos = 4;
+                    });
+
+                    $("#five").click (
+                     function() {
+                        pos = 5;
+                    });
+
+                    $("#six").click (
+                     function() {
+                        pos = 6;
+                    });
+
+                    $("#contact").click (
+                     function() {
+                        pos = 6;
+                    });
+
+
+                    $(leftPaddle).click (
+                     function() {
+                        if(pos>1) {
+                            pos -= 1;
+                        document.getElementById("left").setAttribute("href", "#" + pos);
+                        console.log(pos);
+                        }
+                    });
+
+                    $(rightPaddle).click (
+                        function() {
+                            if(pos<6) {
+                        pos += 1;
+                        document.getElementById("right").setAttribute("href", "#" + pos);
+                        console.log(pos);
+                            }
+                        });
+                </script>
+            </div>
+          </div>
+    </main>
+
+    
+
+
+    <footer>© 2022 Danielle Lyle
+    </footer>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #e66465, #ffffff);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 2px solid rgb(218, 216, 216);
+    text-align: center;
+    font-size: 5rem;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+}
+
+form {
+    display: grid;
+    width: 80vw;
+    max-width: 800px;
+    margin: 2rem;
+    position: relative;
+    border: 2px solid rgb(153, 39, 109);
+    border-radius: 1rem;
+    padding: 4rem 2rem 7rem;
+    gap: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.75rem 0rem rgba(0,0,0,0.25);
+    background-color: #fff;
+}
+
+input {
+    padding: 0.3rem;
+    font-size: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+li.unchecked::before {
+    content: "\2B1C";
+    padding-right: 25px;
+}
+
+
+
+li.checked {
+    color: rgb(199, 199, 199);
+}
+
+li.checked::before {
+    content: "\2705";
+    padding-right: 25px;
+}
+
+span {
+    font-size: 0.75rem;
+    padding-left: 25px;
+    color: rgba(255, 0, 0, 0.5);
+}
+
+p {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+p:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+p.unchecked {
+    background-color: rgb(167, 238, 167);  
+}
+
+p.unchecked:hover {
+    background-color: rgb(129, 177, 129);
+}
+
+p.checked {
+    background-color: pink;
+}
+
