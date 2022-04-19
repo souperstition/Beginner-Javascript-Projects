@@ -1,0 +1,63 @@
+body, html {
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: calc(16px + 1vw);
+    background-color: pink;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer {
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    justify-content: center;
+}
+#svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+}
+
+svg.banner { width: 100%; height: auto; }
+
+
+button, input{
+    border:none;
+    background:transparent;
+}
+
+input {
+    text-align: center;
+    font-size: calc(3rem + 0.5vw);
+    font-weight: bold;
+    width: auto;
+    flex: 1;
+    align-self: flex-end;
+    padding: 0;
+    border: 4px solid transparent;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+button {
+    font-size: calc(1.5rem + 0.5vw);
+    padding: 0 0.5rem;
+    width: auto;
+}
+
+
+button:hover {
+    color: pink;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
